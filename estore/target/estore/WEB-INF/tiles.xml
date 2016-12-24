@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseTemplate" template="/WEB-INF/jsp/estore/layouts/layouts.jsp">
+        <put-attribute name="title" value="FrameworkOnly | Apache Tiles 3 + Spring 4 MVC"></put-attribute>
+        <put-attribute name="stylecss" value="/WEB-INF/jsp/estore/layouts/styles.jsp"></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/jsp/estore/layouts/header.jsp"></put-attribute>
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/estore/layouts/sidebar.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/jsp/estore/layouts/footer.jsp"></put-attribute>
+        <put-attribute name="scriptjs" value="/WEB-INF/jsp/estore/layouts/scriptjs.jsp"></put-attribute>
+    </definition>
+    
+    
+    <definition name="homepage" extends="baseTemplate">
+        <put-attribute name="title" value="FrameworkOnly | Home Page"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/jsp/estore/home/home.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="userRegister" extends="baseTemplate">
+        <put-attribute name="title" value="FrameworkOnly | Registeration Page"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/jsp/estore/register/register.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="login" extends="baseTemplate">
+        <put-attribute name="title" value="FrameworkOnly | User Login Page"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/jsp/estore/login/login.jsp"></put-attribute>
+    </definition>
+    
+    
+    <definition name="errTemplate" template="/WEB-INF/jsp/estore/layouts/errorlayouts.jsp">
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+    
+    <definition name="errMsgs" extends="errTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/estore/errorMessages.jsp"></put-attribute>
+    </definition>
+    
+</tiles-definitions>
